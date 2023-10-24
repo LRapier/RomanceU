@@ -43,10 +43,11 @@ void approach()
     int choice = 0; 
     cout<<"You see two people sitting at Woo Cafe..."<<endl;
     cout<<"You choose to approach... ";
+    
     // display images 
     
     cin>>choice; 
-    while(choice =! 1 || choice =! 2) // this part having problems
+    while(choice != 1 && choice != 2)
     {
         cin.clear();
 	    cin.ignore(INT_MAX, '\n');
@@ -56,11 +57,11 @@ void approach()
     
     if (choice == 1)
     {
-        cout<<"MAN"<<endl;
+        cout<<"MAN"<<endl; //call man function
     }
     else 
     {
-        cout<<"WOMAN"<<endl;
+        cout<<"WOMAN"<<endl; //call woman function
     }
 }
 
