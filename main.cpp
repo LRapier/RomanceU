@@ -8,7 +8,34 @@ Code, Compile, Run and Debug online from anywhere in world.
 *******************************************************************************/
 #include <iostream>
 #include <climits>
+#include "woman.h"
+#include "man.h"
 using namespace std;
+
+class MainCharacter
+{
+    private:
+        string name;
+        int points;
+        //char grade;
+    public: 
+        void setName()
+        {
+            cout<<"What's your name?: ";
+            cin>>name;
+        }
+        void setPoints(int p)
+        {
+            points += p;
+        }
+        friend ostream& operator<<(ostream &os, const MainCharacter&);
+};
+
+ostream& operator<<(ostream &os, const MainCharacter &mc)
+{
+    os<<mc.name;
+    return os;
+}
 
 class Character
 {
