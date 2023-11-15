@@ -1,0 +1,5 @@
+part 1 text good 
+
+part 2 text neutral 
+
+part 3 text bad
