@@ -1,40 +1,18 @@
 /******************************************************************************
-
-
-
+* File: main.cpp
+* Author: 
+* https://stackoverflow.com/questions/5207550/in-c-is-there-a-way-to-go-to-a-specific-line-in-a-text-file
 *******************************************************************************/
 #include <iostream>
 #include <climits>
+#include <limits>
 #include <fstream>
-#include "woman.h"
-#include "man.h"
+#include "character.h"
 #include "dialogue.h"
 using namespace std;
 
-class Character
-{
-   private:
-      int score;
-      string name;
-   public:
-};
-
-class Man : public Character
-{
-   private:
-   public: 
-};
-
-class Woman : public Character
-{
-   private:
-   public: 
-};
-
-Character createCharacter();
-
 // Man Interactions
-void ManInteractionOne()
+void ManInteractionOne(MainCharacter player)
 {
    int choice = 0; 
    dialogue1();
@@ -45,26 +23,53 @@ void ManInteractionOne()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
    if(choice == 1)
    {
-      cout<<"1.1"<<endl; // (good)
+      cout<<"1.1"<<endl; 
+      // adds a point (good)
+      player.setPoints(1);
+      cout<<player.getPoints()<<endl;
+      
+      string line;
+      ifstream test("test.txt");
+      for (int i = 1; i <= 1; i++)
+         getline(test, line);
+      cout<<line<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.1"<<endl; // (nuetral)
+      cout<<"2.1"<<endl; 
+      // no points change (nuetral)
+      player.setPoints(0);
+      cout<<player.getPoints()<<endl;
+      
+      string line;
+      ifstream test("test.txt");
+      for (int i = 1; i <= 3; i++)
+         getline(test, line);
+      cout<<line<<endl;
    }
    else
    {
-      cout<<"3.1"<<endl; // (bad)
+      cout<<"3.1"<<endl; 
+      // subtracts a point (bad)
+      player.setPoints(-1);
+      cout<<player.getPoints()<<endl;
+      
+      string line;
+      ifstream test("test.txt");
+      for (int i = 1; i <= 5; i++)
+         getline(test, line);
+      cout<<line<<endl;
    }
     
-   ManInteractionTwo();
+   ManInteractionTwo(player);
 }
-void ManInteractionTwo()
+void ManInteractionTwo(MainCharacter player)
 {
    int choice = 0; 
    dialogue2();
@@ -75,7 +80,7 @@ void ManInteractionTwo()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -92,9 +97,9 @@ void ManInteractionTwo()
       cout<<"3.2"<<endl; // (bad)
    }
     
-   ManInteractionThree();
+   ManInteractionThree(player);
 }
-void ManInteractionThree()
+void ManInteractionThree(MainCharacter player)
 {
    int choice = 0; 
    dialogue3();
@@ -105,7 +110,7 @@ void ManInteractionThree()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -122,9 +127,9 @@ void ManInteractionThree()
       cout<<"3.3"<<endl; // (bad)
    }
     
-   ManInteractionFour();
+   ManInteractionFour(player);
 }
-void ManInteractionFour()
+void ManInteractionFour(MainCharacter player)
 {
    int choice = 0; 
    dialogue4();
@@ -135,7 +140,7 @@ void ManInteractionFour()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -152,9 +157,9 @@ void ManInteractionFour()
       cout<<"3.4"<<endl; // (bad)
    }
     
-   ManInteractionFive();
+   ManInteractionFive(player);
 }
-void ManInteractionFive()
+void ManInteractionFive(MainCharacter player)
 {
    int choice = 0; 
    dialogue5();
@@ -165,7 +170,7 @@ void ManInteractionFive()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -184,7 +189,7 @@ void ManInteractionFive()
 }
 
 // Woman Interactions
-void WomanInteractionOne()
+void WomanInteractionOne(MainCharacter player)
 {
    int choice = 0; 
    dialogue1();
@@ -195,26 +200,35 @@ void WomanInteractionOne()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
    if(choice == 1)
    {
-      cout<<"1.1"<<endl; // (good)
+      cout<<"1.1"<<endl; 
+      // (good)
+      player.setPoints(-1);
+      cout<<player.getPoints()<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.1"<<endl; // (nuetral)
+      cout<<"2.1"<<endl; 
+      // (nuetral)
+      player.setPoints(0);
+      cout<<player.getPoints()<<endl;
    }
    else
    {
-      cout<<"3.1"<<endl; // (bad)
+      cout<<"3.1"<<endl; 
+      // (bad)
+      player.setPoints(1);
+      cout<<player.getPoints()<<endl;
    }
     
-   WomanInteractionTwo();
+   WomanInteractionTwo(player);
 }
-void WomanInteractionTwo()
+void WomanInteractionTwo(MainCharacter player)
 {
    int choice = 0; 
    dialogue2();
@@ -225,7 +239,7 @@ void WomanInteractionTwo()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -242,9 +256,9 @@ void WomanInteractionTwo()
       cout<<"3.2"<<endl; // (bad)
    }
     
-   WomanInteractionThree();
+   WomanInteractionThree(player);
 }
-void WomanInteractionThree()
+void WomanInteractionThree(MainCharacter player)
 {
    int choice = 0; 
    dialogue3();
@@ -255,7 +269,7 @@ void WomanInteractionThree()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -272,9 +286,9 @@ void WomanInteractionThree()
       cout<<"3.3"<<endl; // (bad)
    }
     
-   WomanInteractionFour();
+   WomanInteractionFour(player);
 }
-void WomanInteractionFour()
+void WomanInteractionFour(MainCharacter player)
 {
    int choice = 0; 
    dialogue4();
@@ -285,7 +299,7 @@ void WomanInteractionFour()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -302,9 +316,9 @@ void WomanInteractionFour()
       cout<<"3.4"<<endl; // (bad)
    }
     
-   WomanInteractionFive();
+   WomanInteractionFive(player);
 }
-void WomanInteractionFive()
+void WomanInteractionFive(MainCharacter player)
 {
    int choice = 0; 
    dialogue5();
@@ -315,7 +329,7 @@ void WomanInteractionFive()
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
     
@@ -369,22 +383,21 @@ void introduction()
    }
 }
 
-void approach()
+void approach(MainCharacter player)
 {
    int choice = 0; 
-   cout<<"You see two people sitting at Woo Cafe..."<<endl;
-   cout<<"You choose to approach... ";
     
    cin>>choice; 
    while(choice != 1 && choice != 2 && choice != 3)
    {
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
-	   cout<<"Error. Try again: ";
+	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
    while(choice == 3)
    {
+      cout<<"Give up and go home"<<endl<<endl;
       cin.clear();
 	   cin.ignore(INT_MAX, '\n');
 	   string line;
@@ -402,20 +415,17 @@ void approach()
     
    if(choice == 1)
    {
-      cout<<"MAN"<<endl; // call man function
-      ManInteractionOne();
-   }
-   else if(choice == 2)
-   {
-      cout<<"WOMAN"<<endl; // call woman function
-      WomanInteractionOne();
+      cout<<"Average guy"<<endl<<endl;
+      ManInteractionOne(player);
    }
    else
    {
-      cout<<"give up and go home"<<endl; // make do again with some quippy remark
+      cout<<"Suit girl"<<endl<<endl;
+      WomanInteractionOne(player);
    }
 }
 
+// Displays dialogue
 void dialogue1()
 {
    string line;
@@ -484,8 +494,15 @@ void dialogue5()
 
 int main()
 {
+   MainCharacter player;
+   player.setName();
+   cout<<player<<endl;
+   
+   //Man man;
+   //cout<<man*/
+   
    introduction();
-   approach();
+   approach(player);
 
    return 0;
 }
