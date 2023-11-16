@@ -1,5 +1,10 @@
-Sam help 4
+"A-Awesome..!"
 
-1 - 
-2 - 
-3 - 
+You're doing it! You're carrying the conversation! 
+This could be your chance to finally score a date and win college.
+All you need to do is make sure that they're single. You don't
+need to get beat up for encroaching on someone else's territory.
+
+1 - "So... you single?"
+2 - "Is there a Mr or Mrs I should be worrying about?"
+3 - "How's the progress on your major coming?"
