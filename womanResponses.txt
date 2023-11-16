@@ -1,7 +1,14 @@
+//dialogue1
 The woman cringes at your poor attempt at flirting.
 The woman returns to working on her laptop. "No, you are welcome to take it."
 The woman leans away from you, a disgusted look on her face.
 
+//dialogue2
 "I'm Christina. Pleased to make your acquaintance."
 The woman stares at you with cold eyes. "Christina."
 The woman looks at you uncomfortably. "...Christina..."
+
+//dialogue3
+Christina answers immediately and efficiently. "Red."
+If looks could kill, you'd be dead.
+Christina takes her time and really thinks about it. "I would be... an owl." 
