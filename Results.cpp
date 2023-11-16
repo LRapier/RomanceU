@@ -31,7 +31,7 @@ void printResults(ifstream &fin, string partner, int choices[], int score)
     
     ofstream resultsPrint("YourResults.txt");
     
-    while(!fin.eof())
+    do
     {
         getline(fin, printLine);
         if(printLine.find('x') != std::string::npos)
@@ -53,15 +53,17 @@ void printResults(ifstream &fin, string partner, int choices[], int score)
             cout<<printLine<<endl;
         resultsPrint<<printLine<<endl;
     }
+    while(!fin.eof());
     fin.close();
     
     fin.open(gradeFile);
-    while(!fin.eof())
+    do
     {
         getline(fin, printLine);
         cout<<printLine<<endl;
         resultsPrint<<printLine<<endl;
     }
+    while(!fin.eof());
     fin.close();
     resultsPrint.close();
 }
