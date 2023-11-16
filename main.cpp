@@ -1,3 +1,5 @@
+
+
 /******************************************************************************
 * File: main.cpp
 * Author: 
@@ -11,12 +13,11 @@
 #include "dialogue.h"
 using namespace std;
 
-// Man Interactions
+// Man Interaction Functions
 void ManInteractionOne(MainCharacter player)
 {
    int choice = 0; 
    dialogue1();
-   cout<<"You choose to approach... ";
     
    cin>>choice; 
    while(choice != 1 && choice != 2 && choice != 3)
@@ -26,54 +27,49 @@ void ManInteractionOne(MainCharacter player)
 	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
-    
+   
+   cout<<endl;
+   
    if(choice == 1)
    {
-      cout<<"1.1"<<endl; 
       // adds a point (good)
       player.setPoints(1);
-      cout<<player.getPoints()<<endl;
       
       string line;
-      ifstream test("test.txt");
-      for (int i = 1; i <= 1; i++)
-         getline(test, line);
-      cout<<line<<endl;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 2; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.1"<<endl; 
       // no points change (nuetral)
       player.setPoints(0);
-      cout<<player.getPoints()<<endl;
       
       string line;
-      ifstream test("test.txt");
+      ifstream manResponses("manResponses.txt");
       for (int i = 1; i <= 3; i++)
-         getline(test, line);
-      cout<<line<<endl;
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
    else
    {
-      cout<<"3.1"<<endl; 
       // subtracts a point (bad)
       player.setPoints(-1);
-      cout<<player.getPoints()<<endl;
       
       string line;
-      ifstream test("test.txt");
-      for (int i = 1; i <= 5; i++)
-         getline(test, line);
-      cout<<line<<endl;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 4; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
     
    ManInteractionTwo(player);
 }
-void ManInteractionTwo(MainCharacter player)
+void ManInteractionTwo(MainCharacter player) 
 {
    int choice = 0; 
    dialogue2();
-   cout<<"You choose to approach... ";
     
    cin>>choice; 
    while(choice != 1 && choice != 2 && choice != 3)
@@ -83,18 +79,42 @@ void ManInteractionTwo(MainCharacter player)
 	   cout<<"That's not an option silly. Try again: ";
 	   cin>>choice;
    }
+   
+   cout<<endl;
     
    if(choice == 1)
    {
-      cout<<"1.2"<<endl; // (good)
+      // adds a point (good)
+      player.setPoints(1);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 7; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.2"<<endl; // (nuetral)
+      // no points change (nuetral)
+      player.setPoints(0);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 8; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
+  
    }
    else
    {
-      cout<<"3.2"<<endl; // (bad)
+      // subtracts a point (bad)
+      player.setPoints(-1);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 9; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
     
    ManInteractionThree(player);
@@ -103,7 +123,6 @@ void ManInteractionThree(MainCharacter player)
 {
    int choice = 0; 
    dialogue3();
-   cout<<"You choose to approach... ";
     
    cin>>choice; 
    while(choice != 1 && choice != 2 && choice != 3)
@@ -116,15 +135,36 @@ void ManInteractionThree(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.3"<<endl; // (good)
+      // (good)
+      player.setPoints(1);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 12; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.3"<<endl; // (nuetral)
+      // (nuetral)
+      player.setPoints(0);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 13; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
    else
    {
-      cout<<"3.3"<<endl; // (bad)
+      // (bad)
+      player.setPoints(-1);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 14; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
    }
     
    ManInteractionFour(player);
@@ -188,12 +228,11 @@ void ManInteractionFive(MainCharacter player)
    }
 }
 
-// Woman Interactions
+// Woman Interaction Functions
 void WomanInteractionOne(MainCharacter player)
 {
    int choice = 0; 
    dialogue1();
-   cout<<"You choose to approach... ";
     
    cin>>choice; 
    while(choice != 1 && choice != 2 && choice != 3)
@@ -206,24 +245,36 @@ void WomanInteractionOne(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.1"<<endl; 
       // (good)
       player.setPoints(-1);
-      cout<<player.getPoints()<<endl;
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 2; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.1"<<endl; 
       // (nuetral)
       player.setPoints(0);
-      cout<<player.getPoints()<<endl;
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 3; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
    }
    else
    {
-      cout<<"3.1"<<endl; 
       // (bad)
       player.setPoints(1);
-      cout<<player.getPoints()<<endl;
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 4; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
    }
     
    WomanInteractionTwo(player);
@@ -232,7 +283,6 @@ void WomanInteractionTwo(MainCharacter player)
 {
    int choice = 0; 
    dialogue2();
-   cout<<"You choose to approach... ";
     
    cin>>choice; 
    while(choice != 1 && choice != 2 && choice != 3)
@@ -245,15 +295,36 @@ void WomanInteractionTwo(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.2"<<endl; // (good)
+      // (good)
+      player.setPoints(-1);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 7; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.2"<<endl; // (nuetral)
+      // (nuetral)
+      player.setPoints(-1);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 8; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
    }
    else
    {
-      cout<<"3.2"<<endl; // (bad)
+      // (bad)
+      player.setPoints(-1);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 9; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
    }
     
    WomanInteractionThree(player);
@@ -425,7 +496,7 @@ void approach(MainCharacter player)
    }
 }
 
-// Displays dialogue
+// Displays dialogue files 
 void dialogue1()
 {
    string line;
@@ -506,8 +577,3 @@ int main()
 
    return 0;
 }
-
-
-
-
-
