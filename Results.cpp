@@ -6,22 +6,22 @@
 
 using namespace std;
 
-void printResults(ifstream &fin, string partner, int choices[], int score)
+void printResults(ifstream &fin, string mcName, int choices[], int score)
 {
     string printLine = "";
     string gradeFile = "";
     switch(score)
     {
-        case 5:
+        case 5, 4:
             gradeFile = "GradeA.txt";
             break;
-        case 4:
+        case 3, 2:
             gradeFile = "GradeB.txt";
             break;
-        case 3:
+        case 1, 0, -1:
             gradeFile = "GradeC.txt";
             break;
-        case 2:
+        case -2, -3:
             gradeFile = "GradeD.txt";
             break;
         default:
@@ -36,8 +36,8 @@ void printResults(ifstream &fin, string partner, int choices[], int score)
         getline(fin, printLine);
         if(printLine.find('x') != std::string::npos)
         {
-            cout<<"|	Your Name: "<<partner<<"\t\t\t\t\t\t\t\t\t\t";
-            printLine = "|	Your Name: " + partner + "\t\t\t\t\t\t\t\t\t\t";
+            cout<<"|	Your Name: "<<mcName<<"\t\t\t\t\t\t\t\t\t\t";
+            printLine = "|	Your Name: " + mcName + "\t\t\t\t\t\t\t\t\t\t";
             if(partner.length() <= 4)
             {
                 cout<<"\t\t\t  |"<<endl;
