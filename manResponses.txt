@@ -9,15 +9,13 @@ The man blushes, a dumb expression crossing his face. "I'm, uh, Justin."
 "Oh, you want my name..? It's Justin."
 
 //dialogue3
-Justin thinks really hard. "It's blue- no, Green! ...Actually I think it's yellow."
+Justin thinks really hard. "It's blue- no, green! ...Actually I think it's yellow."
 "I live on campus, actually. I'm in hall four of Dingus."
-<<<<<<< HEAD
-"I think I'd be a wolf... Or some kind of wolf-lion hybrid mix."
-=======
 "I think I'd be a wolf... Or some kind of wolf-lion hybrid mix."
 
 //dialogue4
 Justin scratches his chest. "Yeah."
 Justin looks confused. "I'm not married..?"
 "I'll level with you man, it's not looking good. I think I'm going to fail."
->>>>>>> ca004fbd42ca1cf8096b22d12004d21051df505d
+
+//results
