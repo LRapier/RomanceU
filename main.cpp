@@ -31,7 +31,7 @@ void ManInteractionOne(MainCharacter player)
    if(choice == 1)
    {
       // adds a point (good)
-      player.setPoints(1);
+      player.setPoints(-1);
       
       string line;
       ifstream manResponses("manResponses.txt");
@@ -53,7 +53,7 @@ void ManInteractionOne(MainCharacter player)
    else
    {
       // subtracts a point (bad)
-      player.setPoints(-1);
+      player.setPoints(1);
       
       string line;
       ifstream manResponses("manResponses.txt");
@@ -83,7 +83,7 @@ void ManInteractionTwo(MainCharacter player)
    if(choice == 1)
    {
       // adds a point (good)
-      player.setPoints(1);
+      player.setPoints(0);
       
       string line;
       ifstream manResponses("manResponses.txt");
@@ -94,7 +94,7 @@ void ManInteractionTwo(MainCharacter player)
    else if(choice == 2)
    {
       // no points change (nuetral)
-      player.setPoints(0);
+      player.setPoints(1);
       
       string line;
       ifstream manResponses("manResponses.txt");
@@ -156,7 +156,7 @@ void ManInteractionThree(MainCharacter player)
    else
    {
       // (bad)
-      player.setPoints(-1);
+      player.setPoints(1);
       
       string line;
       ifstream manResponses("manResponses.txt");
@@ -184,7 +184,7 @@ void ManInteractionFour(MainCharacter player)
     
    if(choice == 1)
    {
-       player.setPoints(-1); // (good)
+       player.setPoints(0); // (good)
 
       string line;
       ifstream manResponses("manResponses.txt");
@@ -204,7 +204,7 @@ void ManInteractionFour(MainCharacter player)
    }
    else
    {
-       player.setPoints(-1); // (bad)
+       player.setPoints(0); // (bad)
 
       string line;
       ifstream manResponses("manResponses.txt");
@@ -232,11 +232,11 @@ void ManInteractionFive(MainCharacter player)
     
    if(choice == 1)
    {
-       player.setPoints(-1); // (good)
+       player.setPoints(1); // (good)
    }
    else if(choice == 2)
    {
-       player.setPoints(-1); // (nuetral)
+       player.setPoints(0); // (nuetral)
    }
    else
    {
@@ -262,7 +262,7 @@ void WomanInteractionOne(MainCharacter player)
    if(choice == 1)
    {
       // (good)
-      player.setPoints(-1);
+      player.setPoints(0);
       
       string line;
       ifstream womanResponses("womanResponses.txt");
@@ -273,7 +273,7 @@ void WomanInteractionOne(MainCharacter player)
    else if(choice == 2)
    {
       // (nuetral)
-      player.setPoints(0);
+      player.setPoints(1);
       
       string line;
       ifstream womanResponses("womanResponses.txt");
@@ -284,7 +284,7 @@ void WomanInteractionOne(MainCharacter player)
    else
    {
       // (bad)
-      player.setPoints(1);
+      player.setPoints(-1);
       
       string line;
       ifstream womanResponses("womanResponses.txt");
@@ -312,7 +312,7 @@ void WomanInteractionTwo(MainCharacter player)
    if(choice == 1)
    {
       // (good)
-      player.setPoints(-1);
+      player.setPoints(1);
       
       string line;
       ifstream womanResponses("womanResponses.txt");
@@ -323,7 +323,7 @@ void WomanInteractionTwo(MainCharacter player)
    else if(choice == 2)
    {
       // (nuetral)
-      player.setPoints(-1);
+      player.setPoints(0);
       
       string line;
       ifstream womanResponses("womanResponses.txt");
@@ -362,15 +362,33 @@ void WomanInteractionThree(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.3"<<endl; // (good)
+       player.setPoints(0);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 12; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
    }
-   else if(choice == 2)
+   else if (choice == 2)
    {
-      cout<<"2.3"<<endl; // (nuetral)
+       player.setPoints(-1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 13; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
    }
    else
    {
-      cout<<"3.3"<<endl; // (bad)
+       player.setPoints(1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 14; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
    }
     
    WomanInteractionFour(player);
@@ -392,15 +410,33 @@ void WomanInteractionFour(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.4"<<endl; // (good)
+       player.setPoints(0);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 17; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.4"<<endl; // (nuetral)
+       player.setPoints(-1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 18; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
    }
    else
    {
-      cout<<"3.4"<<endl; // (bad)
+       player.setPoints(1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 19; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
    }
     
    WomanInteractionFive(player);
@@ -422,15 +458,15 @@ void WomanInteractionFive(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.5"<<endl; // (good)
+       player.setPoints(0); // (good)
    }
    else if(choice == 2)
    {
-      cout<<"2.5"<<endl; // (nuetral)
+       player.setPoints(1); // (nuetral)
    }
    else
    {
-      cout<<"3.5"<<endl; // (bad)
+       player.setPoints(-1); // (bad)
    }
 }
 
