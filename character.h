@@ -1,4 +1,5 @@
 #include <iostream>
+#incude "Results.h"
 using namespace std;
 
 class Character
@@ -15,10 +16,15 @@ class MainCharacter : public Character
 {
    private:
       int points = 0;
-      //char grade;
+      int choices[5];
    public: 
       MainCharacter()
       {}
+      ~MainCharacter()
+      {
+          ifstream fin("Results.txt");
+          printResults(fin, name, choices, points);
+      }
       void setName()
       {
          cout<<"What's your name?: ";
