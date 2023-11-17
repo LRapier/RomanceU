@@ -184,15 +184,33 @@ void ManInteractionFour(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.4"<<endl; // (good)
+       player.setPoints(-1); // (good)
+
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 17; i++)
+          getline(manResponses, line);
+      cout << line << endl << endl;
    }
    else if(choice == 2)
    {
-      cout<<"2.4"<<endl; // (nuetral)
+       player.setPoints(-1); // (nuetral)
+
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 18; i++)
+          getline(manResponses, line);
+      cout << line << endl << endl;
    }
    else
    {
-      cout<<"3.4"<<endl; // (bad)
+       player.setPoints(-1); // (bad)
+
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 19; i++)
+          getline(manResponses, line);
+      cout << line << endl << endl;
    }
     
    ManInteractionFive(player);
@@ -214,15 +232,15 @@ void ManInteractionFive(MainCharacter player)
     
    if(choice == 1)
    {
-      cout<<"1.5"<<endl; // (good)
+       player.setPoints(-1); // (good)
    }
    else if(choice == 2)
    {
-      cout<<"2.5"<<endl; // (nuetral)
+       player.setPoints(-1); // (nuetral)
    }
    else
    {
-      cout<<"3.5"<<endl; // (bad)
+       player.setPoints(-1); // (bad)
    }
 }
 
