@@ -1,53 +1,47 @@
 #include <iostream>
+#include "results.h"
 using namespace std;
 
 class Character
 {
-   public:
-      string name;
-      friend ostream& operator<<(ostream &os, const Character &mc)
-      {
-         os<<mc.name;
-         return os;
-      }
+    public:
+        string name;
+        friend ostream& operator<<(ostream &os, const Character &mc)
+        {
+            os<<mc.name;
+            return os;
+        }
 };
 class MainCharacter : public Character
 {
-   private:
-      int points = 0;
-      //char grade;
-   public: 
-      MainCharacter()
-      {}
-      void setName()
-      {
-         cout<<"What's your name?: ";
-         cin>>name;
-      }
-      void setPoints(int p)
-      {
-         points += p;
-      }
-      int getPoints()
-      {
-         return points;
-      }
-};
-class Man : public Character
-{
-   public:
-      Man()
-      {
-         name = "Justin Guy";
-      }
-};
-class Woman : public Character
-{
-   public:
-      Woman()
-      {
-         name = "Girlboss";
-      }
+    private:
+        int points = 0;
+        int choices[5];
+    public: 
+        MainCharacter()
+        {}
+        ~MainCharacter()
+        {
+            ifstream fin("results.txt");
+            printResults(fin, name, choices, points);
+        }
+        void setName()
+        {
+            cout<<"What's your name?: ";
+            cin>>name;
+        }
+        string getName()
+        {
+            return name;
+        }
+        void setPoints(int p)
+        {
+            points += p;
+        }
+        int getPoints()
+        {
+            return points;
+        }
 };
 
 void ManInteractionOne(MainCharacter player);
