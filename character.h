@@ -42,16 +42,24 @@ class MainCharacter : public Character
         {
             return points;
         }
+        void setChoices(int c, int i)
+        {
+            choices[i] = c;
+        }
+        int* getChoices()
+        {
+            return choices;
+        }
 };
 
-void ManInteractionOne(MainCharacter player);
-void ManInteractionTwo(MainCharacter player);
-void ManInteractionThree(MainCharacter player);
-void ManInteractionFour(MainCharacter player);
-void ManInteractionFive(MainCharacter player);
+void ManInteractionOne(MainCharacter* player);
+void ManInteractionTwo(MainCharacter* player);
+void ManInteractionThree(MainCharacter* player);
+void ManInteractionFour(MainCharacter* player);
+void ManInteractionFive(MainCharacter* player);
 
-void WomanInteractionOne(MainCharacter player);
-void WomanInteractionTwo(MainCharacter player);
-void WomanInteractionThree(MainCharacter player);
-void WomanInteractionFour(MainCharacter player);
-void WomanInteractionFive(MainCharacter player);
+void WomanInteractionOne(MainCharacter* player);
+void WomanInteractionTwo(MainCharacter* player);
+void WomanInteractionThree(MainCharacter* player);
+void WomanInteractionFour(MainCharacter* player);
+void WomanInteractionFive(MainCharacter* player);
