@@ -11,16 +11,21 @@ void printResults(ifstream &fin, string mcName, int choices[], int score)
     string gradeFile = "";
     switch(score)
     {
-        case 5, 4:
+        case 5:
+        case 4:
             gradeFile = "GradeA.txt";
             break;
-        case 3, 2:
+        case 3:
+        case 2:
             gradeFile = "GradeB.txt";
             break;
-        case 1, 0, -1:
+        case 1:
+        case 0:
+        case -1:
             gradeFile = "GradeC.txt";
             break;
-        case -2, -3:
+        case -2:
+        case -3:
             gradeFile = "GradeD.txt";
             break;
         default:
@@ -37,17 +42,17 @@ void printResults(ifstream &fin, string mcName, int choices[], int score)
         {
             cout<<"|	Your Name: "<<mcName<<"\t\t\t\t\t\t\t\t\t\t";
             printLine = "|	Your Name: " + mcName + "\t\t\t\t\t\t\t\t\t\t";
-            if(partner.length() <= 4)
+            if(mcName.length() <= 4)
             {
                 cout<<"\t\t\t  |"<<endl;
                 printLine +="\t\t\t  |";
             }
-            else if(partner.length() <= 12)
+            else if(mcName.length() <= 12)
             {
                 cout<<"\t\t  |"<<endl;
                 printLine +="\t\t  |";
             }
-            else if(partner.length() <= 20)
+            else if(mcName.length() <= 20)
             {
                 cout<<"\t  |"<<endl;
                 printLine +="\t  |";
