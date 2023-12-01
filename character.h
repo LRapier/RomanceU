@@ -1,5 +1,9 @@
 #include <iostream>
+<<<<<<< HEAD
 #include "results.h"
+=======
+#include "Results.h"
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
 using namespace std;
 
 class Character
@@ -14,6 +18,7 @@ class Character
 };
 class MainCharacter : public Character
 {
+<<<<<<< HEAD
     private:
         int points = 0;
         int choices[5];
@@ -50,6 +55,48 @@ class MainCharacter : public Character
         {
             return choices;
         }
+=======
+   private:
+      int points = 0;
+      int choices[5];
+   public: 
+      MainCharacter()
+      {}
+      ~MainCharacter()
+      {
+          ifstream fin("Results.txt");
+          printResults(fin, name, choices, points);
+      }
+      void setName()
+      {
+         cout<<"What's your name?: ";
+         cin>>name;
+      }
+      void setPoints(int p)
+      {
+         points += p;
+      }
+      int getPoints()
+      {
+         return points;
+      }
+};
+class Man : public Character
+{
+   public:
+      Man()
+      {
+         name = "Justin Guy";
+      }
+};
+class Woman : public Character
+{
+   public:
+      Woman()
+      {
+         name = "Girlboss";
+      }
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
 };
 
 void ManInteractionOne(MainCharacter* player);

@@ -29,10 +29,17 @@ void ManInteractionOne(MainCharacter* player)
    
     cout<<endl;
    
+<<<<<<< HEAD
     if(choice == 1)
     {
         player->setPoints(-1);
         player->setChoices(1, 0);
+=======
+   if(choice == 1)
+   {
+      // adds a point (good)
+      player.setPoints(-1);
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
       
         string line;
         ifstream manResponses("manResponses.txt");
@@ -45,6 +52,7 @@ void ManInteractionOne(MainCharacter* player)
         player->setPoints(0);
         player->setChoices(2, 0);
       
+<<<<<<< HEAD
         string line;
         ifstream manResponses("manResponses.txt");
         for (int i = 1; i <= 3; i++)
@@ -55,6 +63,18 @@ void ManInteractionOne(MainCharacter* player)
     {
         player->setPoints(1);
         player->setChoices(3, 0);
+=======
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 3; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else
+   {
+      // subtracts a point (bad)
+      player.setPoints(1);
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
       
         string line;
         ifstream manResponses("manResponses.txt");
@@ -81,6 +101,7 @@ void ManInteractionTwo(MainCharacter* player)
    
     cout<<endl;
     
+<<<<<<< HEAD
     if(choice == 1)
     {
         player->setPoints(0);
@@ -96,6 +117,23 @@ void ManInteractionTwo(MainCharacter* player)
     {
         player->setPoints(1);
         player->setChoices(2, 1);
+=======
+   if(choice == 1)
+   {
+      // adds a point (good)
+      player.setPoints(0);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 7; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else if(choice == 2)
+   {
+      // no points change (nuetral)
+      player.setPoints(1);
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
       
         string line;
         ifstream manResponses("manResponses.txt");
@@ -131,7 +169,43 @@ void ManInteractionThree(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
+=======
+   if(choice == 1)
+   {
+      // (good)
+      player.setPoints(1);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 12; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else if(choice == 2)
+   {
+      // (nuetral)
+      player.setPoints(0);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 13; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else
+   {
+      // (bad)
+      player.setPoints(1);
+      
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 14; i++)
+         getline(manResponses, line);
+      cout<<line<<endl<<endl;
+   }
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
     
     if(choice == 1)
     {
@@ -183,7 +257,40 @@ void ManInteractionFour(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
+=======
+   if(choice == 1)
+   {
+       player.setPoints(0); // (good)
+
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 17; i++)
+          getline(manResponses, line);
+      cout << line << endl << endl;
+   }
+   else if(choice == 2)
+   {
+       player.setPoints(-1); // (nuetral)
+
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 18; i++)
+          getline(manResponses, line);
+      cout << line << endl << endl;
+   }
+   else
+   {
+       player.setPoints(0); // (bad)
+
+      string line;
+      ifstream manResponses("manResponses.txt");
+      for (int i = 1; i <= 19; i++)
+          getline(manResponses, line);
+      cout << line << endl << endl;
+   }
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
     
     if(choice == 1)
     {
@@ -235,6 +342,7 @@ void ManInteractionFive(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
     
     if(choice == 1)
@@ -270,6 +378,20 @@ void ManInteractionFive(MainCharacter* player)
             getline(manResponses, line);
         cout<<line<<endl<<endl;*/
     }
+=======
+   if(choice == 1)
+   {
+       player.setPoints(1); // (good)
+   }
+   else if(choice == 2)
+   {
+       player.setPoints(0); // (nuetral)
+   }
+   else
+   {
+       player.setPoints(-1); // (bad)
+   }
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
 }
 
 // Woman Interaction Functions
@@ -287,7 +409,43 @@ void WomanInteractionOne(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
+=======
+   if(choice == 1)
+   {
+      // (good)
+      player.setPoints(0);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 2; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else if(choice == 2)
+   {
+      // (nuetral)
+      player.setPoints(1);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 3; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else
+   {
+      // (bad)
+      player.setPoints(-1);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 4; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
+   }
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
     
     if(choice == 1)
     {
@@ -339,6 +497,7 @@ void WomanInteractionTwo(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
     
     if(choice == 1)
@@ -356,6 +515,23 @@ void WomanInteractionTwo(MainCharacter* player)
     {
         player->setPoints(0);
         player->setChoices(2, 1);
+=======
+   if(choice == 1)
+   {
+      // (good)
+      player.setPoints(1);
+      
+      string line;
+      ifstream womanResponses("womanResponses.txt");
+      for (int i = 1; i <= 7; i++)
+         getline(womanResponses, line);
+      cout<<line<<endl<<endl;
+   }
+   else if(choice == 2)
+   {
+      // (nuetral)
+      player.setPoints(0);
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
       
         string line;
         ifstream womanResponses("womanResponses.txt");
@@ -391,7 +567,40 @@ void WomanInteractionThree(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
+=======
+   if(choice == 1)
+   {
+       player.setPoints(0);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 12; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
+   }
+   else if (choice == 2)
+   {
+       player.setPoints(-1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 13; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
+   }
+   else
+   {
+       player.setPoints(1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 14; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
+   }
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
     
     if(choice == 1)
     {
@@ -443,12 +652,76 @@ void WomanInteractionFour(MainCharacter* player)
 	    cin>>choice;
     }
     
+<<<<<<< HEAD
     cout<<endl;
     
     if(choice == 1)
     {
         player->setPoints(0);
         player->setChoices(1, 3);
+=======
+   if(choice == 1)
+   {
+       player.setPoints(0);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 17; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
+   }
+   else if(choice == 2)
+   {
+       player.setPoints(-1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 18; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
+   }
+   else
+   {
+       player.setPoints(1);
+
+       string line;
+       ifstream womanResponses("womanResponses.txt");
+       for (int i = 1; i <= 19; i++)
+           getline(womanResponses, line);
+       cout << line << endl << endl;
+   }
+    
+   WomanInteractionFive(player);
+}
+void WomanInteractionFive(MainCharacter player)
+{
+   int choice = 0; 
+   dialogue5();
+   cout<<"You choose to approach... ";
+    
+   cin>>choice; 
+   while(choice != 1 && choice != 2 && choice != 3)
+   {
+      cin.clear();
+	   cin.ignore(INT_MAX, '\n');
+	   cout<<"That's not an option silly. Try again: ";
+	   cin>>choice;
+   }
+    
+   if(choice == 1)
+   {
+       player.setPoints(0); // (good)
+   }
+   else if(choice == 2)
+   {
+       player.setPoints(1); // (nuetral)
+   }
+   else
+   {
+       player.setPoints(-1); // (bad)
+   }
+}
+>>>>>>> 06526a8a4a4e77f3f727a91026f73de15b71df64
 
         string line;
         ifstream womanResponses("womanResponses.txt");
