@@ -1,0 +1,24 @@
+//dialogue1
+The man shakes his head. "Sorry, I don't carry any maps on me."
+"...Nope! Feel free to sit if you want."
+"Yea. I've just been looking at this really cool wall."
+
+//dialogue2
+The man gives you a smile. "Nice to meet you too! I'm Justin." 
+The man blushes, a dumb expression crossing his face. "I'm, uh, Justin."
+"Oh, you want my name..? It's Justin."
+
+//dialogue3
+Justin thinks really hard. "It's blue- no, green! ...Actually I think it's yellow."
+"I live on campus, actually. I'm in hall four of Dingus."
+"I think I'd be a wolf... Or some kind of wolf-lion hybrid mix."
+
+//dialogue4
+Justin scratches his chest. "Yeah."
+Justin looks confused. "I'm not married..?"
+"I'll level with you man, it's not looking good. I think I'm going to fail."
+
+//results
+"Oh, uh... no. I don't want to."
+"Uh, maybe? I'm kinda busy... I got a lot of walls to look at, places to be."
+"Oh yea! I'd love to go out with someone as totally awesome as you!"
