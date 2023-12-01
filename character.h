@@ -1,5 +1,5 @@
 #include <iostream>
-#incude "Results.h"
+#include "Results.h"
 using namespace std;
 
 class Character
